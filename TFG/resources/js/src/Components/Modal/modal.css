@@ -1,0 +1,93 @@
+/* Overlay oscuro con blur */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* Caja del modal */
+.modal {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(10, 10, 10, 0.95);
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  padding: 40px 30px;
+  box-shadow: 0 0 40px rgba(255, 0, 0, 0.25);
+  text-align: center;
+}
+
+/* Título */
+.modal-title {
+  font-size: 26px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Formulario */
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Inputs */
+.modal-input {
+  background: #111;
+  border: 1px solid #333;
+  padding: 14px;
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.modal-input::placeholder {
+  color: #777;
+}
+
+.modal-input:focus {
+  border-color: #e10600;
+}
+
+/* Botón principal */
+.modal-button {
+  margin-top: 10px;
+  padding: 14px;
+  background: #e10600;
+  color: #fff;
+  border: none;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  text-decoration: none;
+  width: 100%;
+}
+
+.modal-button:hover {
+  background: #ff1c1c;
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.modal-footer {
+  margin-top: 24px;
+  font-size: 13px;
+  color: #aaa;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.modal-footer span {
+  color: #e10600;
+  cursor: pointer;
+  font-weight: 600;
+}
