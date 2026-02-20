@@ -11,6 +11,7 @@ export const HelperModalProvider = ({ children }) => {
 
     const addMerch = (producto) => {
         setArrMerch((prev) => [...prev, producto]);
+        alert("Producto añadido ✅")
     };
 
     const removeMerch = (id) => {
@@ -19,6 +20,7 @@ export const HelperModalProvider = ({ children }) => {
 
     const addTicket = (producto) => {
         setArrTicket((prev) => [...prev, producto]);
+        alert("Producto añadido ✅")
     };
 
     const removeTicket = (id) => {

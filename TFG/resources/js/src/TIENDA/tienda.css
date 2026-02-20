@@ -28,7 +28,7 @@
 }
 
 .category-btn:hover,
-.category-btn.active {
+.category-btn:focus {
     background-color: #dc2626;
     border-color: #dc2626;
 }
