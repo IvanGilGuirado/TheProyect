@@ -79,6 +79,11 @@ function CarritoModal() {
                         return (
                             <div key={index} className="cart-product">
                                 <div className="cart-text">
+                                    <img
+                                        src="Camiseta.png"
+                                        alt=""
+                                        className="cart-imgMerch"
+                                    />
                                 <div>
                                     <p>{elemento.categoria}</p>
                                     <strong className="cart-precio">
@@ -92,6 +97,7 @@ function CarritoModal() {
                                 >
                                     🗑️
                                 </button>
+                                <hr />
                             </div>
                         );
                     })}
