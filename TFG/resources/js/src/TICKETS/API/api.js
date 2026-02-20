@@ -20,5 +20,5 @@ export async function guardarTickets(datos) {
     },
   });
   const response = await datatype.json();
-  console.log(response);
+
 }

@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { recuperarConciertos } from "../API/api";
+
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const RouteHelperContext = createContext();
@@ -7,21 +7,24 @@ export const RouteHelperContext = createContext();
 export const RouteHelperProvider = ({ children }) => {
     let [conciertos, setConciertos] = useState([]);
 
-    useEffect(() => {
-        async function iniciar() {
-            const resultado = await recuperarConciertos()
-            setConciertos(resultado)
-        }
-        iniciar()
+    async function filtrar(e) {
+        e.preventDefault();
 
+        const formData = new FormData(e.target);
+        const params = new URLSearchParams(formData);
 
+        const response = await fetch(`http://127.0.0.1:8000/filtro?${params}`);
 
+        const data = await response.json();
+        setConciertos(data);
+        console.log(data);
+        
+    }
 
-    }, [])
 
 
     return (
-        <RouteHelperContext.Provider value={{ conciertos, setConciertos }}>
+        <RouteHelperContext.Provider value={{ conciertos, setConciertos, filtrar }}>
             {children}
         </RouteHelperContext.Provider>
     )

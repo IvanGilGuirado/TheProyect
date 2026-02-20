@@ -14,9 +14,7 @@ export async function getMerch(categoriaActiva) {
 export async function getTickets() {
     const url = new URL(
         "http://localhost:8080/ticket/tickets",
-    );
-    console.log(url);
-    
+    );  
     const datatype = await fetch(url);
     const datos = await datatype.json();
     if (!datos) {

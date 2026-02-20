@@ -12,7 +12,6 @@ export const HelperTicketsProvider = ({ children }) => {
         async function iniciar() {
             const resultado = await getTickets()
             setTickets(resultado)
-            console.log(resultado)
         }
         iniciar()
     }, [])

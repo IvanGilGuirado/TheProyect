@@ -5,6 +5,7 @@ import { getMerch } from "../API/api";
 export const HelperTiendaContext = createContext();
 
 export const HelperTiendaProvider = ({ children }) => {
+    
     const [merch, setMerch] = useState([]);
     const [categoriaActiva, setCategoriaActiva] = useState("all");
 
