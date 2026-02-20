@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class MerchandisingDTO {
 
+    private Integer id;
     private String nombre;
     private Float precio;
     private Float stock;

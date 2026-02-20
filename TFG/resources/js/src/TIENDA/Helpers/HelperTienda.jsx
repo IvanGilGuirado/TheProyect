@@ -16,9 +16,6 @@ export const HelperTiendaProvider = ({ children }) => {
         iniciar()
     }, [categoriaActiva])
 
-
-
-
     return (
         <HelperTiendaContext.Provider value={{ merch, setMerch, categoriaActiva, setCategoriaActiva }}>
             {children}

@@ -4,11 +4,15 @@ import Navbar from '../../Components/NavBars/NavBar'
 import { HelperTiendaContext } from '../Helpers/HelperTienda'
 import Footer from '../../Components/Footer/Footer'
 import { getMerch } from '../API/api'
+import { HelperModalContext } from '../../Components/Modal/Helper/HelperModal'
+
 
 function Tienda() {
 
     const { merch } = useContext(HelperTiendaContext)
     const { setCategoriaActiva } = useContext(HelperTiendaContext)
+    const { addMerch } = useContext(HelperModalContext)
+
     return (
         <>
             <Navbar />
@@ -49,7 +53,7 @@ function Tienda() {
                                     <div className='product-info'>
                                         <h3 className="product-name">{elemento.nombre}</h3>
                                         <p className="product-price">{elemento.precio}</p>
-                                        <button className="product-btn">Añadir al Carrito</button>
+                                        <button className="product-btn" onClick={() => addMerch(elemento)}>Añadir al Carrito</button>
                                     </div>
 
                                 </div>

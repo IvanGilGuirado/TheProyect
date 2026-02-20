@@ -3,9 +3,12 @@ import { Link } from "react-router-dom";
 import Navbar from "../../Components/NavBars/NavBar";
 import { HelperTicketsContext } from "../Helper/HelperTickets";
 import Footer from "../../Components/Footer/Footer";
+import { HelperModalContext } from "../../Components/Modal/Helper/HelperModal";
+
 
 function Tickets() {
     const { tickets } = useContext(HelperTicketsContext);
+    const { addTicket } = useContext(HelperModalContext);
     return (
         <>
             <Navbar />
@@ -32,7 +35,10 @@ function Tickets() {
                                     <ul className="ticket-features">
                                         <li>{elemento.descripcion}</li>
                                     </ul>
-                                    <button className="ticket-btn">
+                                    <button
+                                        className="ticket-btn"
+                                        onClick={() => addTicket(elemento)}
+                                    >
                                         Comprar Ahora
                                     </button>
                                 </div>

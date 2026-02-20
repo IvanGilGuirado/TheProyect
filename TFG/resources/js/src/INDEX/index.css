@@ -447,6 +447,43 @@ html {
     flex: 1;
     padding: 20px;
     overflow-y: auto;
+    background-color: #e0dfde;
+}
+
+.cart-product {
+    background-color: #e0dfde;
+    color: #000;
+    margin-bottom: 1rem;
+    position: relative;
+    font-size: 20px;
+}
+
+.cart-text {
+    display: flex;
+    align-items: center;
+}
+
+.cart-precio{
+    font-size: 1rem;
+}
+
+.cart-imgMerch {
+    width: 60px;
+    margin-right: 20px;
+}
+
+.cart-btn {
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    bottom: 10px; /* distancia desde abajo */
+    right: 10px; /* distancia desde la derecha */
+    transition: 0.3s;
+}
+
+.cart-btn:hover {
+    transform: scale(2);
 }
 
 .cart-footer {
